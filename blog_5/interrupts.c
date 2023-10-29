@@ -91,7 +91,7 @@ void EXT_config()
 	EXT_FTSR &= ~(3<<8);						
 	EXT_FTSR |= (3<<8);							// Falling trigger enabled for 8th pin.
 	NVIC_ISER0 &= ~(0x00800000);		
-	NVIC_ISER0 |= (0x00800000);			// from vector table EXTI[5:9] port have 23 priority ,so set '1' at 23rd bit in NVIC registers
+	NVIC_ISER0 |= (0x00800000);			// from vector table EXTI[5:9] port have 23rd priority ,so set '1' at 23rd bit in NVIC registers
 }
 
 int main()
